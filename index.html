@@ -23,7 +23,10 @@
 
 <body class="body">
 
-
+    <!-- fixed call button -->
+    <div class="call_button">
+        <img src="assets/img/svg/fixed_phone-button_black.svg" alt="">
+    </div>
     <!-- section_intro  -->
     <section id="intro" class="section_intro">
         <header id="header" class="section_header">
@@ -176,7 +179,7 @@
                         <div class="card_item__icon">
                             <img src="assets/img/svg/doc-file.svg" alt="">
                         </div>
-                        <div class="card_item__value">
+                        <div class="card_item__title">
                             1676
                         </div>
                         <div class="card_item__description">
@@ -189,7 +192,7 @@
                         <div class="card_item__icon">
                             <img src="assets/img/svg/people.svg" alt="">
                         </div>
-                        <div class="card_item__value">
+                        <div class="card_item__title">
                             90%
                         </div>
                         <div class="card_item__description">
@@ -202,7 +205,7 @@
                         <div class="card_item__icon">
                             <img src="assets/img/svg/calendar.svg" alt="">
                         </div>
-                        <div class="card_item__value">
+                        <div class="card_item__title">
                             4+
                         </div>
                         <div class="card_item__description">
@@ -215,7 +218,7 @@
                         <div class="card_item__icon">
                             <img src="assets/img/svg/note.svg" alt="">
                         </div>
-                        <div class="card_item__value">
+                        <div class="card_item__title">
                             26 817
                         </div>
                         <div class="card_item__description">
@@ -238,7 +241,7 @@
                     </div>
                 </div>
                 <div class="col-8 ">
-                    <div class="autoplay">
+                    <div class="specialization_autoplay">
                         <div>
                             <div class="d-flex justify-content-end">
                                 <!-- <div class="col-6"> -->
@@ -339,20 +342,20 @@
             <div class="row">
                 <div class="col section_title">Алгоритм работы</div>
             </div>
-            <div class="row flex-nowrap">
+            <div class="row algorithm_items_slider">
                 <div class="col-3">
                     <div class="card_item">
                         <div class="card_item__icon">
                             <img src="assets/img/svg/book.svg" alt="">
                         </div>
-                        <div class="card_item__value">
+                        <div class="card_item__title">
                             Подготовка
                         </div>
-                        <div class="card_item__description">
-                            <div>Заявка</div>
-                            <div>Анализ вакансии</div>
-                            <div>Договор</div>
-                        </div>
+                        <ol class="card_item__description">
+                            <li>Заявка</li>
+                            <li>Анализ вакансии</li>
+                            <li>Договор</li>
+                        </ol>
                     </div>
                 </div>
                 <div class="col-3">
@@ -360,13 +363,13 @@
                         <div class="card_item__icon">
                             <img src="assets/img/svg/search.svg" alt="">
                         </div>
-                        <div class="card_item__value">
+                        <div class="card_item__title">
                             Поиск </div>
-                        <div class="card_item__description">
-                            <div>Определение портрета кандидата</div>
-                            <div>Формирование карты поиска </div>
-                            <div>Определение длинного списка претендентов</div>
-                        </div>
+                        <ol class="card_item__description">
+                            <li>Определение портрета кандидата</li>
+                            <li>Формирование карты поиска </li>
+                            <li>Определение длинного списка претендентов</li>
+                        </ol>
                     </div>
                 </div>
                 <div class="col-3">
@@ -374,13 +377,13 @@
                         <div class="card_item__icon">
                             <img src="assets/img/svg/users.svg" alt="">
                         </div>
-                        <div class="card_item__value">
+                        <div class="card_item__title">
                             Отбор </div>
-                        <div class="card_item__description">
-                            <div>Формирование короткого списка </div>
-                            <div>Собеседование </div>
-                            <div>Проверка рекомендаций</div>
-                        </div>
+                        <ol class="card_item__description">
+                            <li>Формирование короткого списка </li>
+                            <li>Собеседование </li>
+                            <li>Проверка рекомендаций</li>
+                        </ol>
                     </div>
                 </div>
                 <div class="col-3">
@@ -388,13 +391,13 @@
                         <div class="card_item__icon">
                             <img src="assets/img/svg/thinking.svg" alt="">
                         </div>
-                        <div class="card_item__value">
+                        <div class="card_item__title">
                             Решение </div>
-                        <div class="card_item__description">
-                            <div>Презентация финальных кандидатов </div>
-                            <div>Собеседование (заказчик) </div>
-                            <div>Предложение о работе победителю</div>
-                        </div>
+                        <ol class="card_item__description">
+                            <li>Презентация финальных кандидатов </li>
+                            <li>Собеседование (заказчик) </li>
+                            <li>Предложение о работе победителю</li>
+                        </ol>
                     </div>
                 </div>
                 <div class="col-3">
@@ -402,16 +405,17 @@
                         <div class="card_item__icon">
                             <img src="assets/img/svg/deal.svg" alt="">
                         </div>
-                        <div class="card_item__value">
+                        <div class="card_item__title">
                             Заключение
                         </div>
-                        <div class="card_item__description">
-                            <div>Выход сотрудника на работу </div>
-                            <div>Оплата услуг </div>
-                            <div>Гарантийные обязательства агентства</div>
-                        </div>
+                        <ol class="card_item__description">
+                            <li>Выход сотрудника на работу </li>
+                            <li>Оплата услуг </li>
+                            <li>Гарантийные обязательства агентства</li>
+                        </ol>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -455,11 +459,68 @@
 
     <!-- section_feedback  -->
     <section id="feedback" class="section_feedback">
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-9 text_box">
+                    <div class="text-center">Заказать рекрутинговые услуги или проконсультироваться по любому вопросу из сферы подбора персонала можно здесь, заполнив форму ниже.
+                    </div>
+                    <div class="text-center">Обращайтесь, будем рады сотрудничеству!</div>
+                </div>
+                <div class="col-6 px-4">
+                    <form action="" class="d-flex justify-content-between">
+                        <div class="col-6 pl-0 pr-5">
+                            <input type="text" placeholder="Имя">
+                            <input type="text" placeholder="Телефон">
+                            <textarea name="" id="" rows="1" placeholder="Сообщение"></textarea>
+
+                        </div>
+                        <div class="col-6 pr-0 pl-5">
+                            <input type="text" placeholder="Компания">
+                            <input type="text" placeholder="E-mail">
+                            <button class="">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- / section_feedback  -->
 
     <!-- section_contacts  -->
     <section id="contacts" class="section_contacts">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="contact_box d-flex">
+                        <div class="col-6 d-flex flex-column align-items-center">
+                            <div class="contacts_title">
+                                Позвоните нам
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/svg/phone.svg" alt="">
+                                <a class="ml-3" href="tel:+">+380996661488</a>
+                            </div>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="assets/img/svg/phone.svg" alt="">
+                                <a class="ml-3" href="tel:+">+380996661488</a>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex flex-column align-items-center">
+                            <div class="contacts_title">
+                                Напишите нам
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/svg/mail.svg" alt="">
+                                <a class="ml-3" href="mailto:">info@enerlize.kiev.ua</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center footer">
+                        ENERLIZE 2020
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- / section_contacts  -->
 

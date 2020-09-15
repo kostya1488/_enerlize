@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.autoplay').slick({
+    $('.specialization_autoplay').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
@@ -9,5 +9,18 @@ $(document).ready(function() {
         arrows: false,
         easing: 'easy',
         pauseOnHover: false,
+        pauseOnFocus: false,
+    });
+    $('.algorithm_items_slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+        speed: 800,
+        // vertical: true,
+        // arrows: true,
+        easing: 'linear',
+        // pauseOnHover: false,
+        // pauseOnFocus: false,
     });
 });
