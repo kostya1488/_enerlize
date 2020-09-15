@@ -1,0 +1,436 @@
+// --- font
+@font-face {
+    font-family: 'Rockwell Extra Bold';
+    src: url(../fonts/Rockwell_Extra_Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Cambria';
+    src: url(../fonts/Cambria.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+// === /font 
+// --- mixins
+@mixin dark_layer {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+}
+
+// === / mixins
+// --- variables
+$screen_xs_max: 575px;
+$screen_sm_max: 767px;
+$screen_md_max: 991px;
+$screen_lg_max: 1199px;
+$screen_sm: 576px;
+$screen_md: 768px;
+$screen_lg: 992px;
+$screen_xl: 1200px;
+// === / variables
+// --- commons
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 160%;
+    color: #1D1B1B;
+    a,
+    a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .container {
+        max-width: 1287px;
+    }
+    .main_btn {
+        display: inline-block;
+        border: 1px solid #FFFFFF;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 145.9%;
+        /* or 20px */
+        text-align: center;
+        min-width: 237px;
+        padding: 11px;
+    }
+    .logo {
+        font-family: 'Rockwell Extra Bold';
+        font-weight: 800;
+    }
+    .section_title {
+        font-family: 'Cambria', sans-serif;
+        font-size: 55px;
+        line-height: 143.9%;
+        margin-bottom: 50px;
+    }
+    .card_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 50px 25px;
+        height: 100%;
+    }
+}
+
+section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    overflow-x: hidden;
+}
+
+// --- section_intro
+.section_intro {
+    padding: 0;
+    .section_header {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        z-index: 4;
+        .logo {
+            color: #fff;
+            font-size: 25px;
+            line-height: 29px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .nav_link {
+            // font-family: 'Open Sans';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 143.9%;
+            /* or 26px */
+            // color: #FFFFFF;
+        }
+    }
+    .carousel {
+        a {
+            z-index: 3;
+            span {
+                background-size: cover;
+                width: 40px;
+                height: 40px;
+            }
+            .carousel-control-next-icon {
+                background: url(../img/svg/next.svg) no-repeat;
+            }
+            .carousel-control-prev-icon {
+                background: url(../img/svg/prev.svg) no-repeat;
+            }
+        }
+        .carousel-indicators {
+            li+li {
+                margin-left: 30px;
+            }
+            li {
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+            }
+        }
+        .carousel-item {
+            position: relative;
+            @include dark_layer;
+        }
+        .carousel-caption {
+            bottom: 25%;
+            font-size: 45px;
+            line-height: 88px;
+            span {
+                font-weight: 800;
+                font-size: 64px;
+                line-height: 88px;
+            }
+        }
+        .carousel-indicators {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// ===/ section_intro
+// --- section_promo
+.section_promo {
+    // padding: 0;
+    .logo {
+        font-size: 50px;
+        line-height: 59px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+    .image_boxes_area {
+        position: relative;
+        min-height: 800px;
+    }
+    .image_box {
+        position: absolute;
+        .image_text {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+        }
+        &.star_1 {
+            left: 50%;
+            margin-left: -182.5px;
+        }
+        &.star_2 {
+            left: 0;
+            bottom: 175px;
+        }
+        &.star_3 {
+            right: 0;
+            bottom: 175px;
+        }
+    }
+    .image_bottom {
+        position: absolute;
+        width: 92px;
+        bottom: 0;
+        left: 50%;
+        margin-left: -46px;
+        .figure_line {
+            width: 2px;
+            height: 164px;
+            background: rgba(0, 0, 0, 0.4);
+        }
+    }
+}
+
+// ===/ section_promo
+// --- section_about
+.section_about {
+    .image_wrap {
+        img {
+            position: relative;
+            width: 656px;
+        }
+    }
+}
+
+// ===/ section_about
+// --- section_advantages
+.section_advantages {
+    padding-bottom: 100px;
+    .card_item {
+        background: rgba(196, 196, 196, 0.2);
+        &__value {
+            margin: 20px 0;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 41px;
+            letter-spacing: 0.11em;
+            color: #000000;
+        }
+    }
+}
+
+// ===/ section_advantages
+// --- section_specialization
+.section_specialization {
+    background: url(../img/specialization.jpg) no-repeat 0 0;
+    background-size: cover;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    @include dark_layer;
+    .specialization_inner_wrap {
+        position: relative;
+        z-index: 3;
+    }
+    .section_title {
+        margin-top: 50px;
+        color: #fff;
+    }
+    .slick-vertical .slick-slide {
+        border: none;
+        outline: none;
+    }
+    .slide_item {
+        height: 391px;
+        position: relative;
+        .text_box_wrap {
+            position: absolute;
+            width: 280px;
+            left: 93px;
+            bottom: 30px;
+            .figure_circle {
+                width: 123px;
+                height: 123px;
+                border-radius: 50%;
+            }
+            .some_text {
+                font-weight: 600;
+                position: absolute;
+                left: 45px;
+                bottom: 28px;
+            }
+        }
+        &__dark {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            .figure_circle {
+                border: 1px solid #fff;
+            }
+        }
+        &__light {
+            background: rgba(255, 255, 255, 0.6);
+            color: #000;
+            .figure_circle {
+                border: 1px solid #000;
+            }
+        }
+    }
+}
+
+// ===/ section_specialization
+// --- section_work_algorithm
+.section_work_algorithm {}
+
+// ===/ section_work_algorithm
+// --- section_search_method
+.section_search_method {
+    background: url(../img/search_method.jpg) no-repeat 0 0;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    @include dark_layer();
+    .search_method_inner_wrap {
+        position: relative;
+        z-index: 3;
+    }
+    .section_title {
+        // margin-top: 100px;
+        color: #fff;
+        font-size: 50px;
+        line-height: 130%;
+        margin-bottom: 0;
+    }
+    .search_method_item {
+        height: 413px;
+        backdrop-filter: blur(10px);
+        font-weight: 600;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .item_list {
+        margin-left: 70px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            // height: 100%;
+            top: 6px;
+            left: -1px;
+        }
+        li+li {
+            margin-top: 30px;
+        }
+        li {
+            padding-left: 30px;
+            position: relative;
+        }
+        .list_circle {
+            &::before {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                left: -8px;
+                top: 50%;
+                margin-top: -7.5px;
+                border-radius: 50%;
+            }
+        }
+        .list_circle_big {
+            &::before {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                left: -10.5px;
+                top: 50%;
+                margin-top: -10px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .item_dark {
+        background: rgba(0, 0, 0, 0.4);
+        color: #C4C4C4;
+        .item_list {
+            &::before {
+                height: 90%;
+                background: #fff;
+            }
+            .list_circle {
+                &::before {
+                    background: #fff;
+                }
+            }
+            .list_circle_big {
+                &::before {
+                    background: #000;
+                }
+            }
+        }
+    }
+    .item_light {
+        background: rgba(196, 196, 196, 0.4);
+        .item_list {
+            &::before {
+                height: 96%;
+                background: #000;
+            }
+            .list_circle {
+                &::before {
+                    background: #000;
+                }
+            }
+            .list_circle_big {
+                &::before {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+
+// ===/ section_search_method
+// --- section_feedback
+.section_feedback {}
+
+// ===/ section_feedback
+// --- section_contacts
+.section_contacts {}
+
+// ===/ section_cont--- acts
+// section_footer
+.section_footer {}
+
+// ===/ section_footer
