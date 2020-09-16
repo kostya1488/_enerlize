@@ -122,7 +122,8 @@ $screen_xl: 1200px;
     ._pl-35 {
         padding-left: 35px;
     }
-    .read_more {
+    .show_hide,
+    .show_hide:hover {
         font-size: 15px;
         color: rgba(0, 0, 0, 0.5);
     }
@@ -206,7 +207,7 @@ section {
             @include dark_layer;
         }
         .text_box {
-            bottom: 25%;
+            bottom: 38%;
             font-size: 45px;
             line-height: 88px;
             span {
@@ -723,6 +724,7 @@ section {
         margin-bottom: 0;
     }
     .search_method_item {
+        width: 50%;
         min-height: 413px;
         // backdrop-filter: blur(10px);
         font-weight: 600;
@@ -831,6 +833,7 @@ section {
     @media (max-width: $screen_xs_max) {
         background-position: 34% 0;
         .search_method_item {
+            width: 70%;
             padding-top: 40px;
             padding-bottom: 40px;
         }

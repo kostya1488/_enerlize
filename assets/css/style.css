@@ -78,7 +78,8 @@
       background: rgba(255, 255, 255, 0.6); }
   .body ._pl-35 {
     padding-left: 35px; }
-  .body .read_more {
+  .body .show_hide,
+  .body .show_hide:hover {
     font-size: 15px;
     color: rgba(0, 0, 0, 0.5); }
   @media (max-width: 1199px) {
@@ -146,7 +147,7 @@ section {
       background: rgba(0, 0, 0, 0.5);
       z-index: 2; }
   .section_intro .carousel .text_box {
-    bottom: 25%;
+    bottom: 38%;
     font-size: 45px;
     line-height: 88px; }
     .section_intro .carousel .text_box span {
@@ -538,6 +539,7 @@ section {
     line-height: 130%;
     margin-bottom: 0; }
   .section_search_method .search_method_item {
+    width: 50%;
     min-height: 413px;
     font-weight: 600;
     padding-right: 20px;
@@ -610,6 +612,7 @@ section {
     .section_search_method {
       background-position: 34% 0; }
       .section_search_method .search_method_item {
+        width: 70%;
         padding-top: 40px;
         padding-bottom: 40px; }
       .section_search_method .item_dark .item_list::before {
