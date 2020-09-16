@@ -9,22 +9,21 @@
     <title>Enerlize</title>
 
     <link rel="shortcut icon" href="/assets/favicon.ico" />
-
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+
 </head>
 
 <body class="body">
 
     <!-- fixed call button -->
-    <div class="call_button">
+    <div class="call_button d-none d-xl-flex">
         <img src="assets/img/svg/fixed_phone-button_black.svg" alt="">
     </div>
     <!-- section_intro  -->
@@ -33,7 +32,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-4 logo">Enerlize</div>
-                    <div class="col-8">
+                    <div class="col-8 d-none d-xl-block">
                         <ul class="menu d-flex justify-content-between">
                             <li><a href="#" class="nav_link">Заявка</a></li>
                             <li><a href="#" class="nav_link">О нас</a></li>
@@ -43,19 +42,37 @@
                             <li><a href="#" class="nav_link">Контакты</a></li>
                         </ul>
                     </div>
+                    <div class="col-8 d-xl-none text-right">
+                        <a href="tel:+">+38095-569-65-36</a>
+                    </div>
                 </div>
             </div>
         </header>
-        <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+        <!-- mobile -->
+        <div class="banner d-xl-none">
+            <img src="assets/img/banner.jpg" class="" alt="...">
+            <div class="text_box px-3">
+                <div class=""> Рекрутинговое агентство
+                    <span class="text-uppercase">Enerlize</span> <br> с нами комфортно работать
+                </div>
+                <div class="text-center text_box__button">
+                    <a href="#" class="main_btn">Заполнить</a>
+                </div>
+            </div>
+        </div>
+        <!-- / mobile -->
+
+
+        <div id="carouselExampleIndicators" class="carousel slide d-none d-xl-block" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="50000">
-                    <img src="assets/img/slide-1.jpg" class="w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-item active" data-interval="10000">
+                    <img src="assets/img/slide-1.jpg" class="w-xl-100" alt="...">
+                    <div class="carousel-caption text_box">
                         <div> Рекрутинговое агентство <span class="text-uppercase">Enerlize</span> <br> с нами комфортно работать
                         </div>
                         <div>
@@ -63,9 +80,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-interval="50000">
-                    <img src="assets/img/slide-2.jpg" class="w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-item" data-interval="10000">
+                    <img src="assets/img/slide-2.jpg" class="w-xl-100" alt="...">
+                    <div class="carousel-caption text_box">
                         <div> Рекрутинговое агентство <span class="text-uppercase">Enerlize</span> <br> решает ключевые задания бизнеса
                         </div>
                         <div>
@@ -73,9 +90,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-interval="50000">
-                    <img src="assets/img/slide-3.jpg" class="w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-item" data-interval="10000">
+                    <img src="assets/img/slide-3.jpg" class="w-xl-100" alt="...">
+                    <div class="carousel-caption text_box">
                         <div> Рекрутинговое агентство <span class="text-uppercase">Enerlize</span> <br> эксклюзивный подбор персонала
                         </div>
                         <div>
@@ -100,7 +117,7 @@
     <section id="promo" class="section_promo">
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-4">
+                <div class="promo_text_wrap col-sm-7 col-xl-4">
                     <div class="logo">
                         Enerlize
                     </div>
@@ -108,8 +125,8 @@
                         Консалтингова компанія, яка вирішує три ключові завдання бізнесу у сфері управління людськими ресурсами: рекрутинг, менеджмент, автоматизація процесів.
                     </div>
                 </div>
-                <div class="col-7 px-5">
-                    <div class="image_boxes_area">
+                <div class="col-xl-7 px-xl-5 d-flex justify-content-end">
+                    <div class="col-sm-11 col-lg-8 col-xl image_boxes_area">
                         <div class="image_box star_1">
                             <img src="assets/img/radial-vector-star.png" alt="" srcset="">
                             <div class="image_text">
@@ -143,19 +160,23 @@
     <section id="about" class="section_about">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <div class="col-5 text_wrap">
-                    <div class="section_title">
-                        О нашей компании
-                    </div>
+                <div class="col-xl-5 text_wrap">
                     <div>
+                        <img src="assets/img/about_mob.jpg" alt="" class="image_wrap col-sm-7 float-sm-right d-xl-none">
+                        <div class="section_title col-6 p-0">
+                            О нашей компании
+                        </div>
                         Рекрутинговое агентство <b>"Enerlize"</b> станет Вашим незаменимым помощником, если Вас интересует оперативный и профессиональный подбор персонала в Киеве, Украине и странах СНГ. Наши рекрутеры успешно применяют передовые методики
                         поиска персонала, отбора кандидатов в соответствии с требованиями заказчика и проведения оценки профессиональных и личностных параметров соискателей. Мы поможем Вам оперативно найти персонал с высоким уровнем внутренней мотивации,
                         влияющей на продолжительность работы сотрудника в компании.
                         <br><br> Поручая поиск сотрудников профессионалам рекрутингового агентства, Вы получаете доступ к нашей обширной собственной базе кандидатов. Если Вас интересуют узкопрофильные специалисты, профессионалы с уникальным опытом работы
                         – рекрутеры <b>"Enerlize"</b> проведут необходимое исследование рынка и оперативно предоставят Вам списки кандидатов, пользуясь методами прямого поиска персонала и хедхантинга.
+
+
+
                     </div>
                 </div>
-                <div class="col-6 pl-5 image_wrap">
+                <div class="d-none d-xl-block col-6 pl-5 image_wrap">
                     <img src="assets/img/about.jpg" alt="">
                 </div>
             </div>
@@ -167,14 +188,14 @@
     <section id="advantages" class="section_advantages">
         <div class="container">
             <div class="row">
-                <div class="col-3 ">
+                <div class="col-xl-3 ">
                     <div class="section_title">
                         Почему нас выбирают
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-3">
+                <div class="card_item_wrap col-sm-6 col-xl-3">
                     <div class="card_item">
                         <div class="card_item__icon">
                             <img src="assets/img/svg/doc-file.svg" alt="">
@@ -187,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="card_item_wrap col-sm-6 col-xl-3">
                     <div class="card_item">
                         <div class="card_item__icon">
                             <img src="assets/img/svg/people.svg" alt="">
@@ -200,7 +221,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="card_item_wrap col-sm-6 col-xl-3">
                     <div class="card_item">
                         <div class="card_item__icon">
                             <img src="assets/img/svg/calendar.svg" alt="">
@@ -213,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="card_item_wrap col-sm-6 col-xl-3">
                     <div class="card_item">
                         <div class="card_item__icon">
                             <img src="assets/img/svg/note.svg" alt="">
@@ -230,17 +251,19 @@
         </div>
     </section>
     <!-- / section_advantages  -->
-
+    <div class="section_title _pl-35">
+        Специализация
+    </div>
     <!-- section_specialization  -->
     <section id="specialization" class="section_specialization">
         <div class="container">
             <div class="row specialization_inner_wrap">
-                <div class="col-4">
+                <div class="col-xl-4 d-none d-xl-block">
                     <div class="section_title">
                         Специализация
                     </div>
                 </div>
-                <div class="col-8 ">
+                <div class="col-xl-8 ">
                     <div class="specialization_autoplay">
                         <div>
                             <div class="d-flex justify-content-end">
@@ -343,7 +366,7 @@
                 <div class="col section_title">Алгоритм работы</div>
             </div>
             <div class="row algorithm_items_slider">
-                <div class="col-3">
+                <div class="card_item_wrap card_item_wrap__1 col-sm-6 col-xl-3">
                     <div class="card_item">
                         <div class="card_item__icon">
                             <img src="assets/img/svg/book.svg" alt="">
@@ -358,8 +381,8 @@
                         </ol>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="card_item">
+                <div class="card_item_wrap card_item_wrap__2 col-sm-6 col-xl-3">
+                    <div class="card_item ">
                         <div class="card_item__icon">
                             <img src="assets/img/svg/search.svg" alt="">
                         </div>
@@ -372,8 +395,8 @@
                         </ol>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="card_item">
+                <div class="card_item_wrap card_item_wrap__3 col-sm-6 col-xl-3">
+                    <div class="card_item ">
                         <div class="card_item__icon">
                             <img src="assets/img/svg/users.svg" alt="">
                         </div>
@@ -386,8 +409,8 @@
                         </ol>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="card_item">
+                <div class="card_item_wrap card_item_wrap__4 col-sm-6 col-xl-3">
+                    <div class="card_item ">
                         <div class="card_item__icon">
                             <img src="assets/img/svg/thinking.svg" alt="">
                         </div>
@@ -400,8 +423,8 @@
                         </ol>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="card_item">
+                <div class="card_item_wrap card_item_wrap__5 col-sm-6 col-xl-3">
+                    <div class="card_item ">
                         <div class="card_item__icon">
                             <img src="assets/img/svg/deal.svg" alt="">
                         </div>
@@ -415,21 +438,20 @@
                         </ol>
                     </div>
                 </div>
-
             </div>
         </div>
-
-
     </section>
     <!-- / section_work_algorithm -->
 
     <!-- section_search_method  -->
+    <div class="section_title _pl-35 col-10">Методология поиска и отбора кандидатов</div>
+
     <section id="search_method" class="section_search_method">
         <div class="container search_method_inner_wrap">
-            <div class="row">
-                <div class="d-flex align-items-center col-9">
-                    <div class="w-50 section_title">Методология поиска и отбора кандидатов</div>
-                    <div class="w-50 search_method_item item_dark">
+            <div class="row ">
+                <div class="d-flex align-items-center justify-content-end col-xl-9">
+                    <div class="w-50 section_title d-none d-xl-block">Методология поиска и отбора кандидатов</div>
+                    <div class="w-75 w-sm-50 search_method_item item_dark">
                         <ul class="item_list">
                             <li class="list_circle_big">Headhunting</li>
                             <li class="list_circle">Executive Search</li>
@@ -441,8 +463,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-9">
-                    <div class="w-50 search_method_item item_light">
+                <div class="col-xl-9" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="w-75 w-sm-50 search_method_item item_light">
                         <ul class="item_list">
                             <li class="list_circle_big">FaceReader</li>
                             <li class="list_circle">Глубинное интервью</li>
@@ -461,23 +483,23 @@
     <section id="feedback" class="section_feedback">
         <div class="container">
             <div class="row justify-content-center ">
-                <div class="col-9 text_box">
+                <div class="col-sm-9 text_box">
                     <div class="text-center">Заказать рекрутинговые услуги или проконсультироваться по любому вопросу из сферы подбора персонала можно здесь, заполнив форму ниже.
                     </div>
                     <div class="text-center">Обращайтесь, будем рады сотрудничеству!</div>
                 </div>
-                <div class="col-6 px-4">
-                    <form action="" class="d-flex justify-content-between">
-                        <div class="col-6 pl-0 pr-5">
+                <div class="col-sm-8 col-lg-6 px-sm-4">
+                    <form action="" class="form d-xl-flex justify-content-between">
+                        <div class="col-xl-6 pl-xl-0 pr-xl-5">
                             <input type="text" placeholder="Имя">
                             <input type="text" placeholder="Телефон">
                             <textarea name="" id="" rows="1" placeholder="Сообщение"></textarea>
 
                         </div>
-                        <div class="col-6 pr-0 pl-5">
+                        <div class="col-xl-6 pr-xl-0 pl-xl-5">
                             <input type="text" placeholder="Компания">
                             <input type="text" placeholder="E-mail">
-                            <button class="">Отправить</button>
+                            <button class="button">Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -488,12 +510,12 @@
 
     <!-- section_contacts  -->
     <section id="contacts" class="section_contacts">
-        <div class="container">
+        <div class="container p-0 ">
             <div class="row justify-content-center">
-                <div class="col-6">
-                    <div class="contact_box d-flex">
-                        <div class="col-6 d-flex flex-column align-items-center">
-                            <div class="contacts_title">
+                <div class="col-xl-6">
+                    <div class="contact_box d-flex flex-column align-items-center flex-xl-row align-items-xl-start">
+                        <div class="col-9 col-sm-4 col-lg-3 col-xl-6 d-flex flex-column align-items-xl-center">
+                            <div class="contacts_title d-none d-xl-block">
                                 Позвоните нам
                             </div>
                             <div class="d-flex align-items-center">
@@ -505,11 +527,11 @@
                                 <a class="ml-3" href="tel:+">+380996661488</a>
                             </div>
                         </div>
-                        <div class="col-6 d-flex flex-column align-items-center">
-                            <div class="contacts_title">
+                        <div class="col-9 col-sm-4 col-lg-3 col-xl-6 d-flex flex-column align-items-xl-center">
+                            <div class="contacts_title d-none d-xl-block">
                                 Напишите нам
                             </div>
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center mt-3 mt-xl-0">
                                 <img src="assets/img/svg/mail.svg" alt="">
                                 <a class="ml-3" href="mailto:">info@enerlize.kiev.ua</a>
                             </div>
@@ -529,9 +551,11 @@
     </footer>
     <!-- / section_footer  -->
 
+
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
