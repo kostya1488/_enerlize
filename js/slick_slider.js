@@ -18,12 +18,15 @@ $(document).ready(function() {
         }]
     }
     advantages_settings = {
+        initialSlide: 1,
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
         arrows: false,
         centerMode: true,
         infinite: false,
+        focusOnSelect: true,
+
 
 
         speed: 800,

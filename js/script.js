@@ -21,4 +21,5 @@ $(document).ready(function() {
         return false
     });
     // ------------------------------------ 
+    $('.card_item_wrap[tabindex="0"]').css('transform', 'scale(1.1)')
 });

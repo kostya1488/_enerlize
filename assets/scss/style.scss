@@ -9,7 +9,7 @@
     src: url(../fonts/Cambria.ttf);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
 // === /font 
 // --- mixins
 @mixin dark_layer {
@@ -42,8 +42,8 @@ $screen_xl: 1200px;
 }
 
 .body {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
     line-height: 160%;
     color: #1D1B1B;
     a,
@@ -95,6 +95,7 @@ $screen_xl: 1200px;
         align-items: center;
         padding: 50px 25px;
         height: 100%;
+        transition: .3s;
     }
     .call_button {
         position: fixed;
@@ -111,7 +112,7 @@ $screen_xl: 1200px;
         z-index: 100;
         cursor: pointer;
         transition: .3s;
-        transform: rotate(10deg);
+        // transform: rotate(10deg);
         img {
             width: 35px;
         }
@@ -137,6 +138,7 @@ $screen_xl: 1200px;
         }
     }
     @media (max-width: $screen_xs_max) {
+        font-size: 17px;
         .container {
             padding: 0 30px;
         }
@@ -165,7 +167,7 @@ section {
         z-index: 4;
         .logo {
             color: #fff;
-            font-size: 25px;
+            font-size: 30px;
             line-height: 29px;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -178,6 +180,9 @@ section {
         @media (max-width: $screen_xs_max) {
             .container {
                 padding: 0 15px;
+            }
+            .logo {
+                font-size: 25px;
             }
         }
     }
@@ -211,14 +216,9 @@ section {
             @include dark_layer;
         }
         .text_box {
-            bottom: 38%;
+            bottom: 30%;
             font-size: 45px;
             line-height: 88px;
-            span {
-                font-weight: 800;
-                font-size: 64px;
-                line-height: 88px;
-            }
         }
         .carousel-indicators {
             margin-bottom: 30px;
@@ -227,19 +227,17 @@ section {
     @media (min-width: $screen_sm) and (max-width: $screen_lg_max) {
         .banner {
             min-height: 716px;
-        }
-        .text_box {
-            font-size: 45px;
-            line-height: 88px;
-            span {
-                font-weight: 800;
-                font-size: 64px;
-                line-height: 88px;
-            }
-            &__button {
-                margin-top: 20px;
-                .main_btn {
-                    min-width: 358px;
+            .text_box {
+                .logo {
+                    font-weight: 800;
+                    font-size: 64px;
+                    line-height: 88px;
+                }
+                &__button {
+                    margin-top: 20px;
+                    .main_btn {
+                        min-width: 358px;
+                    }
                 }
             }
         }
@@ -256,11 +254,12 @@ section {
             position: absolute;
             color: #fff;
             left: 0;
-            bottom: 25%;
-            font-size: 45px;
-            line-height: 88px;
-            span {
-                font-weight: 800;
+            bottom: 150px;
+            .big_text {
+                font-size: 45px;
+                line-height: 88px;
+            }
+            .logo {
                 font-size: 64px;
                 line-height: 88px;
             }
@@ -268,20 +267,26 @@ section {
     }
     @media (max-width: $screen_xs_max) {
         .banner {
-            min-height: 630px;
+            min-height: 94vh;
             img {
                 height: 100%;
             }
             .text_box {
-                font-size: 30px;
-                line-height: 145.9%;
-                letter-spacing: 0.05em;
-                span {
+                .big_text {
+                    font-size: 25px;
+                    line-height: 145.9%;
+                    letter-spacing: 0.05em;
+                }
+                .little_text {
+                    font-size: 18px;
+                }
+                .logo {
                     font-size: 30px;
                     font-weight: 800;
+                    line-height: 0;
                 }
                 &__button {
-                    margin-top: 50px;
+                    margin-top: 30px;
                 }
             }
             .main_btn {
@@ -414,6 +419,8 @@ section {
 .section_advantages {
     .card_item {
         background: rgba(196, 196, 196, 0.2);
+        padding-left: 15px;
+        padding-right: 15px;
         &__title {
             margin: 20px 0;
             font-weight: 600;
@@ -437,7 +444,52 @@ section {
     }
     @media (max-width: $screen_xs_max) {
         .card_item_wrap {
-            padding: 15px 30px;
+            padding: 15px;
+        }
+        .card_item {
+            padding-top: 40px;
+            padding-bottom: 20px;
+            min-height: 300px;
+        }
+        .slick-slide {
+            outline: none;
+            &.slick-center {
+                .card_item {
+                    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+                    min-height: 310px;
+                }
+            }
+        }
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+            li+li {
+                margin-left: 10px;
+            }
+            button {
+                font-size: 0;
+                line-height: 0;
+                padding: 0;
+                width: 30px;
+                // height: 1px;
+                background: rgba(0, 0, 0, 0);
+                border: none;
+                border-bottom: 1px solid #000;
+                border-top: 2px solid rgba(0, 0, 0, 0);
+                outline: none;
+                // border-bottom: 1px solid #000;
+                // border-top: 2px solid rgba(0, 0, 0, 0);
+                // background: #000;
+                transition: .3s;
+                &:focus {
+                    border-top: 2px solid rgba(0, 0, 0, 1);
+                }
+            }
+            .slick-active {
+                button {
+                    border-top: 2px solid rgba(0, 0, 0, 1);
+                }
+            }
         }
     }
 }
@@ -543,7 +595,8 @@ section {
         background-repeat: no-repeat;
         background-position: center center;
         background-color: #fff;
-        border: 2px solid #5A5957;
+        // border: 2px solid #5A5957;
+        border: none;
         z-index: 3;
         width: 50px;
         height: 50px;
@@ -758,7 +811,7 @@ section {
         }
     }
     .item_dark {
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.6);
         color: #C4C4C4;
         .item_list {
             &::before {
@@ -783,7 +836,7 @@ section {
         }
     }
     .item_light {
-        background: rgba(196, 196, 196, 0.4);
+        background: rgba(196, 196, 196, 0.6);
         transition: .4s;
         .item_list {
             &::before {
@@ -849,9 +902,7 @@ section {
 // --- section_feedback
 .section_feedback {
     padding-top: 150px;
-    .text_box {
-        font-family: 'Cambria', sans-serif;
-    }
+    .text_box {}
     .form {
         margin-top: 30px;
         input,
@@ -860,16 +911,21 @@ section {
             width: 100%;
             border: none;
             outline: none;
-            resize: none;
-            padding: 11px 0;
-            border-bottom: 1px solid #C4C4C4;
             font-family: 'Montserrat';
             font-weight: 500;
             font-size: 15px;
-            color: rgba(29, 27, 27, 0.5);
+        }
+        input,
+        textarea {
+            resize: none;
+            padding: 11px 0;
+            border-bottom: 1px solid #C4C4C4;
             margin-top: 45px;
+            color: rgba(29, 27, 27, 0.5);
         }
         .button {
+            margin-top: 48px;
+            padding: 9px 0;
             border: 1px solid #000000;
             font-weight: 600;
             color: #000;
@@ -905,7 +961,6 @@ section {
         position: relative;
         z-index: 3;
         background: rgba(196, 196, 196, 0.2);
-        font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 20px;
         line-height: 145.9%;
@@ -940,6 +995,15 @@ section {
             margin: 75px 0 0;
         }
         background-position: 9% 0;
+    }
+    .footer {
+        position: relative;
+        z-index: 3;
+        padding: 30px 0;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18px;
+        color: #CBCACA;
     }
 }
 
