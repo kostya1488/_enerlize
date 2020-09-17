@@ -77,14 +77,32 @@
     .body .call_button:hover {
       background: rgba(255, 255, 255, 0.4); }
     .body .call_button:active {
-      transform: scale(0.95);
+      transform: scale(0.8);
       background: rgba(255, 255, 255, 0.6); }
+    .body .call_button.active {
+      background: rgba(224, 223, 223, 0.3); }
   .body ._pl-35 {
     padding-left: 35px; }
   .body .show_hide,
   .body .show_hide:hover {
     font-size: 15px;
     color: rgba(0, 0, 0, 0.5); }
+  .body .side_bar {
+    position: fixed;
+    right: 0;
+    bottom: 200px;
+    background: rgba(224, 223, 223, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 5;
+    padding: 55px 75px;
+    transform: translateX(500px);
+    transition: .3s; }
+    .body .side_bar a {
+      color: #000;
+      font-weight: 500;
+      font-size: 20px; }
+    .body .side_bar.active {
+      transform: translateX(0px); }
   @media (max-width: 1199px) {
     .body .container {
       padding: 0 35px; } }
@@ -206,6 +224,7 @@ section {
         line-height: 145.9%;
         letter-spacing: 0.05em; }
       .section_intro .banner .text_box .little_text {
+        margin-top: 4px;
         font-size: 18px; }
       .section_intro .banner .text_box .logo {
         font-size: 30px;
@@ -334,7 +353,7 @@ section {
     outline: none; }
     .section_advantages .slick-slide.slick-center .card_item {
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-      min-height: 310px; }
+      transform: scale(1.02); }
   .section_advantages .slick-dots {
     display: flex;
     justify-content: center; }

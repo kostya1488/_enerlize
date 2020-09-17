@@ -120,8 +120,11 @@ $screen_xl: 1200px;
             background: rgba(255, 255, 255, 0.4);
         }
         &:active {
-            transform: scale(0.95);
+            transform: scale(0.8);
             background: rgba(255, 255, 255, 0.6);
+        }
+        &.active {
+            background: rgba(224, 223, 223, 0.3);
         }
     }
     ._pl-35 {
@@ -131,6 +134,25 @@ $screen_xl: 1200px;
     .show_hide:hover {
         font-size: 15px;
         color: rgba(0, 0, 0, 0.5);
+    }
+    .side_bar {
+        position: fixed;
+        right: 0;
+        bottom: 200px;
+        background: rgba(224, 223, 223, 0.3);
+        backdrop-filter: blur(10px);
+        z-index: 5;
+        padding: 55px 75px;
+        transform: translateX(500px);
+        transition: .3s;
+        a {
+            color: #000;
+            font-weight: 500;
+            font-size: 20px;
+        }
+        &.active {
+            transform: translateX(0px);
+        }
     }
     @media (max-width: $screen_lg_max) {
         .container {
@@ -278,6 +300,7 @@ section {
                     letter-spacing: 0.05em;
                 }
                 .little_text {
+                    margin-top: 4px;
                     font-size: 18px;
                 }
                 .logo {
@@ -456,7 +479,7 @@ section {
             &.slick-center {
                 .card_item {
                     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-                    min-height: 310px;
+                    transform: scale(1.02);
                 }
             }
         }
@@ -902,7 +925,6 @@ section {
 // --- section_feedback
 .section_feedback {
     padding-top: 150px;
-    .text_box {}
     .form {
         margin-top: 30px;
         input,

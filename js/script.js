@@ -21,5 +21,11 @@ $(document).ready(function() {
         return false
     });
     // ------------------------------------ 
-    $('.card_item_wrap[tabindex="0"]').css('transform', 'scale(1.1)')
+    $('.call_button').click(() => {
+        $('.side_bar').toggleClass('active');
+        $('.call_button').toggleClass('active');
+
+
+    })
+
 });
