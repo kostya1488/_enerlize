@@ -1,7 +1,7 @@
 <?php
-$to = "mail@feleton.com, matvienkoigor956@gmail.com";
+$to = "info@enerlize.net.ua";
 $subject = "Заявка с сайта";
-$headers = "From: message@feleton.com";
+$headers = "From: message@enerlize.net.ua";
 
 if (
 
