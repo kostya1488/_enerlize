@@ -3,11 +3,10 @@ $(document).ready(function() {
     if ($(window).width() <= 576) {
         $(".content").hide();
         $(".show_hide").on("click", function() {
-            var txt = $(".content").is(':visible') ? 'Далее...' : 'Скрыть';
+            var txt = $(".content").is(':visible') ? 'Читати далі...' : 'Приховати';
             $(".show_hide").text(txt);
             $('.content').slideToggle(200);
         });
-
     }
     // ------------------------------------ scroll to id
     $(".nav_link").on("click", function(event) {
@@ -16,16 +15,10 @@ $(document).ready(function() {
             top = $(id).offset().top;
         $('body,html').animate({ scrollTop: top }, 500);
     });
-    // ------------------------------------ reload page disable
-    $('.button').click(() => {
-        return false
-    });
-    // ------------------------------------ 
+
+    // ------------------------------------ toggle class
     $('.call_button').click(() => {
         $('.side_bar').toggleClass('active');
         $('.call_button').toggleClass('active');
-
-
     })
-
 });

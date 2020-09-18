@@ -135,6 +135,18 @@ $screen_xl: 1200px;
         font-size: 15px;
         color: rgba(0, 0, 0, 0.5);
     }
+    @keyframes bounce {
+        0% {
+            transform: translateX(500px);
+        }
+        40% {
+            transform: translateX(-50px);
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
     .side_bar {
         position: fixed;
         right: 0;
@@ -151,7 +163,8 @@ $screen_xl: 1200px;
             font-size: 20px;
         }
         &.active {
-            transform: translateX(0px);
+            animation: bounce .6s ease;
+            transform: translateX(0);
         }
     }
     @media (max-width: $screen_lg_max) {
@@ -306,7 +319,7 @@ section {
                 .logo {
                     font-size: 30px;
                     font-weight: 800;
-                    line-height: 0;
+                    line-height: 36px;
                 }
                 &__button {
                     margin-top: 30px;
@@ -924,9 +937,58 @@ section {
 // ===/ section_search_method
 // --- section_feedback
 .section_feedback {
+    @keyframes bounce_feedback {
+        0% {
+            transform: translateY(800px);
+        }
+        40% {
+            transform: translateY(-60px);
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
     padding-top: 150px;
+    .form_wrap {
+        margin-top: 75px;
+        border: 1px solid #c4c4c400;
+        transition: .9s;
+        max-width: 645px;
+        min-height: 265px;
+        position: relative;
+        overflow: hidden;
+        .form_response {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(800px);
+            transition: .9s;
+        }
+        .form_inner_wrap {
+            transition: .9s;
+        }
+        &.form_send {
+            border: 1px solid #C4C4C4;
+            .form_response {
+                animation: bounce_feedback .9s ease;
+                transform: translateY(0);
+                opacity: 1;
+            }
+            .form_inner_wrap {
+                transform: translateY(-800px);
+                opacity: 0;
+            }
+        }
+    }
     .form {
-        margin-top: 30px;
         input,
         textarea,
         button {
@@ -942,11 +1004,10 @@ section {
             resize: none;
             padding: 11px 0;
             border-bottom: 1px solid #C4C4C4;
-            margin-top: 45px;
             color: rgba(29, 27, 27, 0.5);
         }
         .button {
-            margin-top: 48px;
+            margin-top: 50px;
             padding: 9px 0;
             border: 1px solid #000000;
             font-weight: 600;
@@ -966,6 +1027,12 @@ section {
     }
     @media (max-width: $screen_xs_max) {
         padding-top: 75px;
+        .mt_for_mob {
+            margin-top: 17px;
+        }
+        .container {
+            padding: 0 20px;
+        }
     }
 }
 

@@ -87,6 +87,15 @@
   .body .show_hide:hover {
     font-size: 15px;
     color: rgba(0, 0, 0, 0.5); }
+
+@keyframes bounce {
+  0% {
+    transform: translateX(500px); }
+  40% {
+    transform: translateX(-50px); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
   .body .side_bar {
     position: fixed;
     right: 0;
@@ -102,7 +111,8 @@
       font-weight: 500;
       font-size: 20px; }
     .body .side_bar.active {
-      transform: translateX(0px); }
+      animation: bounce .6s ease;
+      transform: translateX(0); }
   @media (max-width: 1199px) {
     .body .container {
       padding: 0 35px; } }
@@ -229,7 +239,7 @@ section {
       .section_intro .banner .text_box .logo {
         font-size: 30px;
         font-weight: 800;
-        line-height: 0; }
+        line-height: 36px; }
       .section_intro .banner .text_box__button {
         margin-top: 30px; }
       .section_intro .banner .main_btn {
@@ -681,42 +691,84 @@ section {
 
 .section_feedback {
   padding-top: 150px; }
-  .section_feedback .form {
-    margin-top: 30px; }
-    .section_feedback .form input,
-    .section_feedback .form textarea,
-    .section_feedback .form button {
+
+@keyframes bounce_feedback {
+  0% {
+    transform: translateY(800px); }
+  40% {
+    transform: translateY(-60px); }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+  .section_feedback .form_wrap {
+    margin-top: 75px;
+    border: 1px solid #c4c4c400;
+    transition: .9s;
+    max-width: 645px;
+    min-height: 265px;
+    position: relative;
+    overflow: hidden; }
+    .section_feedback .form_wrap .form_response {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
       width: 100%;
-      border: none;
-      outline: none;
-      font-family: 'Montserrat';
-      font-weight: 500;
-      font-size: 15px; }
-    .section_feedback .form input,
-    .section_feedback .form textarea {
-      resize: none;
-      padding: 11px 0;
-      border-bottom: 1px solid #C4C4C4;
-      margin-top: 45px;
-      color: rgba(29, 27, 27, 0.5); }
-    .section_feedback .form .button {
-      margin-top: 48px;
-      padding: 9px 0;
-      border: 1px solid #000000;
-      font-weight: 600;
-      color: #000;
-      background: #00000000;
-      transition: .3s;
-      text-align: center;
-      cursor: pointer; }
-      .section_feedback .form .button:hover {
-        background: rgba(0, 0, 0, 0.02); }
-      .section_feedback .form .button:active {
-        transform: scale(0.95);
-        background: rgba(0, 0, 0, 0.05); }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(800px);
+      transition: .9s; }
+    .section_feedback .form_wrap .form_inner_wrap {
+      transition: .9s; }
+    .section_feedback .form_wrap.form_send {
+      border: 1px solid #C4C4C4; }
+      .section_feedback .form_wrap.form_send .form_response {
+        animation: bounce_feedback .9s ease;
+        transform: translateY(0);
+        opacity: 1; }
+      .section_feedback .form_wrap.form_send .form_inner_wrap {
+        transform: translateY(-800px);
+        opacity: 0; }
+  .section_feedback .form input,
+  .section_feedback .form textarea,
+  .section_feedback .form button {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 15px; }
+  .section_feedback .form input,
+  .section_feedback .form textarea {
+    resize: none;
+    padding: 11px 0;
+    border-bottom: 1px solid #C4C4C4;
+    color: rgba(29, 27, 27, 0.5); }
+  .section_feedback .form .button {
+    margin-top: 50px;
+    padding: 9px 0;
+    border: 1px solid #000000;
+    font-weight: 600;
+    color: #000;
+    background: #00000000;
+    transition: .3s;
+    text-align: center;
+    cursor: pointer; }
+    .section_feedback .form .button:hover {
+      background: rgba(0, 0, 0, 0.02); }
+    .section_feedback .form .button:active {
+      transform: scale(0.95);
+      background: rgba(0, 0, 0, 0.05); }
   @media (max-width: 575px) {
     .section_feedback {
-      padding-top: 75px; } }
+      padding-top: 75px; }
+      .section_feedback .mt_for_mob {
+        margin-top: 17px; }
+      .section_feedback .container {
+        padding: 0 20px; } }
 
 .section_contacts {
   padding-bottom: 0;

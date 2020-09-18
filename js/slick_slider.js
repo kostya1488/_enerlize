@@ -32,9 +32,11 @@ $(document).ready(function() {
         speed: 800,
         easing: 'easy',
     }
-    slickForScreenSize(advantages_slider, advantages_settings, $(window).width() > 576);
 
+    slickForScreenSize(advantages_slider, advantages_settings, $(window).width() > 576);
     slickForScreenSize(algorithm_slider, algorithm_settings, $(window).width() < 1200);
+
+
 
     $('.vertical_slider').slick({
         slidesToShow: 2,
