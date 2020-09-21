@@ -512,15 +512,11 @@ section {
                 line-height: 0;
                 padding: 0;
                 width: 30px;
-                // height: 1px;
                 background: rgba(0, 0, 0, 0);
                 border: none;
                 border-bottom: 1px solid #000;
                 border-top: 2px solid rgba(0, 0, 0, 0);
                 outline: none;
-                // border-bottom: 1px solid #000;
-                // border-top: 2px solid rgba(0, 0, 0, 0);
-                // background: #000;
                 transition: .3s;
                 &:focus {
                     border-top: 2px solid rgba(0, 0, 0, 1);
